@@ -1,27 +1,54 @@
-📌 Description
-This project was an attempt to scrape the Top 250 Movies from IMDb's Top Chart using Python, requests, and BeautifulSoup.
+# 🎬 IMDb Top 250 Movies Scraper (Project Attempt)
 
-⚠️ Current Status: Not Functional
-Due to IMDb's security policies and modern web structure:
+## 📌 Description
 
-The content is dynamically loaded with JavaScript
+This project was an attempt to scrape the **Top 250 Movies** from [IMDb's Top Chart](https://www.imdb.com/chart/top) using **Python**, `requests`, and `BeautifulSoup`.
 
-IMDb employs bot detection and anti-scraping headers
+The goal was to extract:
+- Movie rank
+- Title
+- Release year
+- IMDb rating
+- Main star cast
 
-As a result, requests + BeautifulSoup do not return usable HTML, and the scraper fails to extract data (returns empty or 403 errors)
+and store the results in a CSV file.
 
-✅ What Was Tried
-Setting custom User-Agent headers
+---
 
-Inspecting selectors for titles, ratings, and crew info
+## ⚠️ Current Status: Not Functional
 
-Testing in Jupyter Notebook and Python script
+Due to **IMDb's website security measures and modern web architecture**, the scraper could not successfully retrieve the required data.
 
-Still, the website blocked direct access to required content.
+### ❌ Issues Faced:
+- The content is **dynamically loaded via JavaScript**
+- IMDb uses **bot detection** and **anti-scraping headers**
+- As a result, `requests` + `BeautifulSoup` return **empty content or HTTP 403 Forbidden errors**
 
-🧩 Learnings
-Not all websites are scrape-friendly, especially big platforms like IMDb.
+---
 
-JavaScript-rendered content needs tools like Selenium, Playwright, or APIs.
+## ✅ What Was Tried
 
-Best alternative: use official APIs, IMDbPY, or datasets from Kaggle.
+- Setting custom `User-Agent` headers
+- Inspecting DOM selectors for titles, ratings, and star cast
+- Testing in Jupyter Notebook and standalone Python script
+
+Despite these efforts, IMDb **blocked direct access** to the actual movie data.
+
+---
+
+## 🧩 Learnings
+
+- Not all websites are scrape-friendly — especially major platforms like IMDb.
+- Sites that render content with JavaScript often require tools like:
+  - **Selenium**
+  - **Playwright**
+  - or official APIs
+- For IMDb, better alternatives include:
+  - [IMDbPY](https://imdbpy.github.io/)
+  - [IMDb datasets on Kaggle](https://www.kaggle.com/search?q=imdb+top+250)
+
+---
+
+## 📎 Final Note
+
+> This was my **first-ever web scraping project**. Although it didn’t yield the expected output, it was a valuable learning experience in understanding real-world scraping limitations.
